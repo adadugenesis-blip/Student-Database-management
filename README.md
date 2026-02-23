@@ -36,24 +36,40 @@ The goal of this project is to design a well-structured database that solves the
 ---
 
 ### 2️⃣ Entities, Relationships, and Attributes
-- Identify the main entities involved in a Student Database Management System.  
-- Define their attributes and relationships.  
-- Draw an Entity Relationship (ER) diagram showing:
-  - Primary keys  
-  - Relationships  
+
+### Entities:
+1. **Students**
+2. **Departments**
+
+### Attributes:
+
+#### Students Table:
+- student_id (PK)
+- first_name
+- last_name
+- gender
+- date_of_birth
+- enrollment_year
+- department_id (FK)
+
+#### Departments Table:
+- department_id (PK)
+- department_name
+
+### Relationship:
+- One department has many students (1:M)
 
 ---
 
 ### 3️⃣ Normalization
 Initially, all student information is stored in a single table that includes:
-- Student details  
-- Department information  
-- Enrollment year  
+Normalize to **Third Normal Form (3NF)**:
+
+- Separate **Departments**
+- Use **department_id** as foreign key in Students
 
 #### Tasks:
-- Explain the problems with this design.  
-- Explain the importance of normalization.  
-- Normalize the database up to **Third Normal Form (3NF)** and show all steps.  
+-  normalization Prevents storing the same data in multiple places, saving storage space and minimizing update errors. 
 
 
 
